@@ -38,10 +38,19 @@ The data analytics that will be covered here wiill include:
         -    Track business growth across: Days, Months, Years
 
 
-**[2️⃣ Cumulative Analysis](documents/change_tver_time_analysis.sql):** Aggregating the data progressively over time. Helps to understand whether our business is growing or declining over time:
+**[2️⃣ Cumulative Analysis](documents/cumulative_analysis.sql):** Aggregating the data progressively over time. Helps to understand whether our business is growing or declining over time:
 #      
         Σ[Cumulative Measure] by [Date Dimension]  
  
             -   Running Total Sales by year 
             -   Moving Average of Sales by month 
 
+
+**[3️⃣ Performance Analysis](documents/performance_analysis.sql):** ` Comparing the current value with the targeted value 
+ Helps to measure Success and compare performance     
+ #
+	      Current[measure] - Target[measure] 
+
+            -    Current sales – average sales
+            -    Current year sale - previous year sale – yoy analysis
+            -    Current sale – lowest sale 
