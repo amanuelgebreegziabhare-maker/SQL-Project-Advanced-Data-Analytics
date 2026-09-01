@@ -64,3 +64,12 @@ Analyzes how an individual part is performing compared to the overall, allowing 
 
 				-	sales / total sales * 100 By Category 
 				-	Quantity / total quantity * 100 BY Category  
+
+
+
+**[5️⃣ Customer Segmentation](documents/customer-segmentation. SQL):** `Data Segmentation, we use this to group the data based on a specific range. Helps to understand the correlation between two measures 
+ #
+			[measure] By [measure] 
+
+				-	Total Products by Sale Range 
+				-	Total Customers by Age 
