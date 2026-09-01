@@ -18,3 +18,15 @@ Key analytical areas include:
 -  Customer Reporting
 -  Product Reporting
 -  Window Functions
+
+# 📚 Analysis Topics
+The data analytics that will be covered here wiill include: 
+-  Change=Over-Time trends
+-  Cumulative Analysis
+-  Performance Analysis
+-  Part-to-Whole Analysis
+-  Data Segmentation
+-  Report
+
+  
+**[1️⃣ Change Over Time Analysis](documents/dimensions_in_databse.sql):** Analyze how a measure evolves over time. Helps track trends and identify seasonality in your data:  Σ[Measure] by [Date Dimension] -  Such as: Total Sales by Year, Average Cost by Month, and Track business growth across: Days, Months, Years
