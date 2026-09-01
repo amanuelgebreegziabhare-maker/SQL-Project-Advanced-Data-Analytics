@@ -54,3 +54,13 @@ The data analytics that will be covered here wiill include:
             -    Current sales – average sales
             -    Current year sale - previous year sale – yoy analysis
             -    Current sale – lowest sale 
+
+
+**[4️⃣ Part-to-Whole Analysis](documents/part_to_whole_analysis.sql):** ` we use this to see the proportionality of a part relative to another        
+
+Analyzes how an individual part is performing compared to the overall, allowing us to understand which category has the greatest impact on the Business 
+ #
+ 			([measure]  / Total[measure]) * 100 By [measure] 
+
+				-	sales / total sales * 100 By Category 
+				-	Quantity / total quantity * 100 BY Category  
