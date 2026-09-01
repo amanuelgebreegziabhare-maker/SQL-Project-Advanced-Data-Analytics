@@ -12,9 +12,9 @@ The project goes beyond descriptive analytics and applies advanced SQL technique
 # 🎯 Objectives
 Transform transactional data into advanced business insights using SQL.
 Key analytical areas include:
-Trend Analysis
-Performance Analysis
-Segmentation
-Customer Reporting
-Product Reporting
-Window Functions
+-  Trend Analysis
+-  Performance Analysis
+-  Segmentation
+-  Customer Reporting
+-  Product Reporting
+-  Window Functions
