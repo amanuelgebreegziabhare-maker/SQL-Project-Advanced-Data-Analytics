@@ -29,4 +29,4 @@ The data analytics that will be covered here wiill include:
 -  Report
 
   
-**[1️⃣ Change Over Time Analysis](documents/dimensions_in_databse.sql):** Analyze how a measure evolves over time. Helps track trends and identify seasonality in your data:  Σ[Measure] by [Date Dimension] -  Such as: Total Sales by Year, Average Cost by Month, and Track business growth across: Days, Months, Years
+**[1️⃣ Change Over Time Analysis](documents/change_tver_time_analysis.sql):** Analyze how a measure evolves over time. Helps track trends and identify seasonality in your data:  Σ[Measure] by [Date Dimension] -  Such as: Total Sales by Year, Average Cost by Month, and Track business growth across: Days, Months, Years
