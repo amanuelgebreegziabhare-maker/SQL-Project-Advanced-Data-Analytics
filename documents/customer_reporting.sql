@@ -26,6 +26,7 @@ Highlights"
 		-	Average order value 
 		-	Average monthly spend 
 
+
 *********** 
 *********** 
 In analyzing big query the best approach is as follows: 
@@ -37,7 +38,7 @@ Selecting all the required Data from the database, first prepare the base data *
 WITH base_query AS ( 
 /*------------------------------------------------------------------------------------- 
 --------------------------------------------------------------------------------------- 
-1.  Base Query: Retrieves core columns from tables:  
+Base Query: Retrieves core columns from tables:  
 --------------------------------------------------------------------------------------- 
 ----------------------------------------------------------------------------------------*/ 
 SELECT  
@@ -69,7 +70,7 @@ the next step is to add aggregations on top of this result that is needed for th
  WITH base_query AS ( 
 /*------------------------------------------------------------------------------------- 
 --------------------------------------------------------------------------------------- 
-1.  Base Query: Retrieves core columns from tables:  
+Adding Aggregations:   
 --------------------------------------------------------------------------------------- 
 ----------------------------------------------------------------------------------------*/ 
 SELECT  
@@ -104,8 +105,6 @@ GROUP BY
 	customer_number, 
 	customer_name, 
 	age 
-
-
 /*
 Then we will do the final transformation to include the aggregations that the report required: 
 
@@ -115,7 +114,7 @@ Then we will do the final transformation to include the aggregations that the re
  WITH base_query AS ( 
 /*---------------------------------------------------------------------------------------- 
 ------------------------------------------------------------------------------------------ 
-1.  Base Query: Retrieves core columns from tables:  
+Base Query: Retrieves core columns from tables:  
 ------------------------------------------------------------------------------------------ 
 -----------------------------------------------------------------------------------------*/ 
 SELECT  
@@ -136,7 +135,7 @@ WHERE order_date IS NOT NULL
 , customer_aggrigation AS ( 
 /*---------------------------------------------------------------------------------------- 
 ------------------------------------------------------------------------------------------ 
-1.  Customer Aggrigation: Summerizes key matrics at the customer level 
+Customer Aggrigation: Summerizes key matrics at the customer level 
 ------------------------------------------------------------------------------------------ 
 -----------------------------------------------------------------------------------------*/ 
 SELECT 
@@ -191,11 +190,15 @@ FROM customer_aggrigation
 
  /*
 
-Final stem: collect all the data and put it as 'VIEW' 
+Final step: collect all the data and put it as 'VIEW' 
+-------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------- 
+UPLOAD THE DATA AS VIEW: "gold.report_customers"
+-------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------- 
+-------------------------------------------------------------------------------------- 
 
-THEN  
-
-UPLOAD THE DATA AS VIEW: as follows: 
 */
 
 CREATE VIEW gold.report_customers AS  
@@ -203,7 +206,7 @@ CREATE VIEW gold.report_customers AS
 WITH base_query AS ( 
 /*------------------------------------------------------------------------------------- 
 -------------------------------------------------------------------------------------- 
-1.  Base Query: Retrieves core columns from tables:  
+Base Query: Retrieves core columns from tables:  
 -------------------------------------------------------------------------------------- 
 -------------------------------------------------------------------------------------*/ 
 SELECT  
@@ -224,7 +227,7 @@ WHERE order_date IS NOT NULL
 , customer_aggrigation AS ( 
 /*---------------------------------------------------------------------------------------- 
 ------------------------------------------------------------------------------------------ 
-2.  Customer Aggrigation: Summerizes key matrics at the customer level 
+Customer Aggrigation: Summerizes key matrics at the customer level 
 ------------------------------------------------------------------------------------------ 
 -----------------------------------------------------------------------------------------*/ 
 SELECT 
@@ -250,6 +253,9 @@ customer_key,
 customer_number, 
 customer_name, 
 age, 
+----------------------------------------------------------------------------------------- 
+--Segments customer’s into categories (VIP, Regular, New) and age group 
+----------------------------------------------------------------------------------------- 
 CASE WHEN age < 20 THEN 'Under 20' 
 	WHEN age BETWEEN 20 AND 29 THEN '20 - 29' 
 	WHEN age BETWEEN 30 AND 39 THEN '30 - 39' 
@@ -261,18 +267,33 @@ CASE WHEN lifespan >= 12 AND total_sales > 5000 THEN 'VIP'
     ELSE 'NEW'  
 END customer_segment, 
 last_order_date, 
+----------------------------------------------------------------------------------------- 
+--Calculates valuable KPIs: Recency (months since last order) 
+----------------------------------------------------------------------------------------- 
 DATEDIFF(month, last_order_date, GETDATE()) AS recency, 
---total_orders, 
+/*----------------------------------------------------------------------------------------- 
+Aggregate customer-level metrics: 
+		-	Total orders 
+		-	Total sales 
+		-	Total quantity purchased 
+		-	Total products 
+		-	Lifespan (in months) 
+----------------------------------------------------------------------------------------- 
+*/
 total_orders, 
 total_sales, 
 total_quantity, 
 total_products, 
 lifespan, 
---compute average order value (AVO) 
+----------------------------------------------------------------------------------------- 
+--Calculates valuable KPIs: compute average order value (AVO) 
+----------------------------------------------------------------------------------------- 
 CASE WHEN total_orders = 0 THEN 0 
 	ELSE total_sales / total_orders  
 END AS avg_order_value, 
---Compute Average Monthly Spent 
+----------------------------------------------------------------------------------------- 
+--Calculates valuable KPIs: Compute Average Monthly Spent 
+----------------------------------------------------------------------------------------- 
 CASE WHEN lifespan = 0 THEN total_sales 
 	ELSE total_sales / lifespan 
 END AS avg_monthly_spend 
