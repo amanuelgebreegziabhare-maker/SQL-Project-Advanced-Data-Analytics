@@ -67,7 +67,7 @@ Analyzes how an individual part is performing compared to the overall, allowing 
 
 
 
-**[5️⃣ Customer Segmentation](documents/customer-segmentation. SQL):** `Data Segmentation, we use this to group the data based on a specific range. Helps to understand the correlation between two measures 
+**[5️⃣ Customer Segmentation](documents/customer-segmentation.SQL):** `Data Segmentation, we use this to group the data based on a specific range. Helps to understand the correlation between two measures 
  #
 			[measure] By [measure] 
 
