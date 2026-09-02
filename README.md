@@ -83,9 +83,9 @@ Purpose:
 
 Highlights:
 
-1-	Gather essential fields such as names, ages, and transaction details. 
-2-	Segments customer’s into categories (VIP, Regular, New) and age group 
-3-	Aggregate customer-level metrics: 
+	1-	Gather essential fields such as names, ages, and transaction details. 
+	2-	Segments customer’s into categories (VIP, Regular, New) and age group 
+	3-	Aggregate customer-level metrics: 
 
 		-	Total orders 
 		-	Total sales 
