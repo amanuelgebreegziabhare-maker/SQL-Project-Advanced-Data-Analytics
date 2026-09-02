@@ -74,7 +74,7 @@ Analyzes how an individual part is performing compared to the overall, allowing 
 				-	Total Products by Sale Range 
 				-	Total Customers by Age 
 
-6️⃣ Customer Reporting
+
 **[6️⃣ Customer Reporting](documents/customer_reporting.sql):** `:
 
 Purpose: 
