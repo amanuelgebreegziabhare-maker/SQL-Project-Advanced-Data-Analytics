@@ -120,3 +120,67 @@ Highlights:
 		-	recency (months since last sale) 
 		-	average order revenue (AOR) 
 		-	average monthly revenue 
+
+## 🛠 SQL Techniques Demonstrated
+
+🔹 **Window Functions**
+- `SUM() OVER()`
+- `AVG() OVER()`
+- `ROW_NUMBER()`
+- `RANK()`
+- `DENSE_RANK()`
+
+🔹 **Common Table Expressions (CTEs)**
+- Recursive and non-recursive CTEs
+- Multi-step analytical queries
+
+🔹 **📈 Trend Analysis**
+- Year-over-Year (YoY) Analysis
+- Month-over-Month (MoM) Analysis
+- Growth Rate Calculations
+- Time-Series Analytics
+
+🔹 **📊 Running Totals & Moving Averages**
+- Cumulative Sales Analysis
+- Rolling Averages
+- Progressive Performance Tracking
+
+🔹 **🎯 Performance Analysis**
+- Actual vs Target Comparisons
+- Benchmark Analysis
+- Best/Worst Performance Identification
+
+🔹 **🧩 Customer Segmentation**
+- Customer Classification
+- Behavioral Analysis
+- Revenue-Based Segmentation
+
+🔹 **🛒 Product Analytics**
+- Product Performance Evaluation
+- Top/Bottom Product Analysis
+- Category-Level Insights
+
+🔹 **🥧 Part-to-Whole Analysis**
+- Percentage Contribution Calculations
+- Category Share Analysis
+- Market Distribution Insights
+
+🔹 **⚡ Advanced Aggregations**
+- Conditional Aggregations
+- Group-Based Analytics
+- Multi-Level Summaries
+
+🔹 **🔄 CASE Expressions**
+- Dynamic Categorization
+- Business Rule Implementation
+- Data Transformation Logic
+
+🔹 **📅 Date & Time Functions**
+- Year, Month, Quarter Analysis
+- Time-Based Grouping
+- Period Comparisons
+
+🔹 **📋 Business Reporting**
+- Executive Dashboards
+- KPI Reporting
+- Customer & Product Reports
