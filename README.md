@@ -100,7 +100,7 @@ Highlights:
 		-	Average monthly spend 
 
 
-**[7️⃣ Product Reporting](documents/customer-segmentation.SQL):** `: 
+**[7️⃣ Product Reporting](documents/product_reporting.sql):** `: 
 
 Purpose: 
 
