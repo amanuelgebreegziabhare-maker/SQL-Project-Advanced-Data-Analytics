@@ -194,13 +194,15 @@ Final step: collect all the data and put it as 'VIEW'
 -------------------------------------------------------------------------------------- 
 -------------------------------------------------------------------------------------- 
 -------------------------------------------------------------------------------------- 
-UPLOAD THE DATA AS VIEW: "gold.report_customers"
+================================Customer Report=======================================
 -------------------------------------------------------------------------------------- 
 -------------------------------------------------------------------------------------- 
 -------------------------------------------------------------------------------------- 
 
 */
-
+-------------------------------------------------------------------------------------- 
+---------------UPLOAD THE DATA AS VIEW: "gold.report_customers"------------------
+-------------------------------------------------------------------------------------- 
 CREATE VIEW gold.report_customers AS  
  
 WITH base_query AS ( 
@@ -272,7 +274,7 @@ last_order_date,
 ----------------------------------------------------------------------------------------- 
 DATEDIFF(month, last_order_date, GETDATE()) AS recency, 
 /*----------------------------------------------------------------------------------------- 
-Aggregate customer-level metrics: 
+3.	Aggregate customer-level metrics: 
 		-	Total orders 
 		-	Total sales 
 		-	Total quantity purchased 
@@ -286,14 +288,14 @@ total_quantity,
 total_products, 
 lifespan, 
 ----------------------------------------------------------------------------------------- 
---Calculates valuable KPIs: compute average order value (AVO) 
+4.	Calculates valuable KPIs: 
+		-	compute average order value (AVO) 
+		-	Compute Average Monthly Spent 
 ----------------------------------------------------------------------------------------- 
 CASE WHEN total_orders = 0 THEN 0 
 	ELSE total_sales / total_orders  
 END AS avg_order_value, 
------------------------------------------------------------------------------------------ 
---Calculates valuable KPIs: Compute Average Monthly Spent 
------------------------------------------------------------------------------------------ 
+
 CASE WHEN lifespan = 0 THEN total_sales 
 	ELSE total_sales / lifespan 
 END AS avg_monthly_spend 
