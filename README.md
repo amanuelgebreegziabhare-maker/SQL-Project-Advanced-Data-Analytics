@@ -73,3 +73,28 @@ Analyzes how an individual part is performing compared to the overall, allowing 
 
 				-	Total Products by Sale Range 
 				-	Total Customers by Age 
+
+6️⃣ Customer Reporting
+**[6️⃣ Customer Reporting](documents/customer_reporting.sql):** `:
+
+Purpose: 
+
+-	This report consolidates key customer metrics and behaviors 
+
+Highlights:
+
+1-	Gather essential fields such as names, ages, and transaction details. 
+2-	Segments customer’s into categories (VIP, Regular, New) and age group 
+3-	Aggregate customer-level metrics: 
+
+		-	Total orders 
+		-	Total sales 
+		-	Total quantity purchased 
+		-	Total products 
+		-	Lifespan (in months) 
+
+4.	Calculates valuable KPIs: 
+
+		-	Recency (months since last order) 
+		-	Average order value 
+		-	Average monthly spend 
