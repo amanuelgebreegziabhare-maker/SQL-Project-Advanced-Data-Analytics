@@ -93,7 +93,7 @@ Highlights:
 		-	Total products 
 		-	Lifespan (in months) 
 
-4.	Calculates valuable KPIs: 
+	4.	Calculates valuable KPIs: 
 
 		-	Recency (months since last order) 
 		-	Average order value 
