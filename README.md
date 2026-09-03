@@ -29,7 +29,7 @@ The data analytics that will be covered here wiill include:
 -  Report
 
   
-**[1️⃣ Change Over Time Analysis](documents/change_over_time_analysis.sql):** Analyze how a measure evolves over time. Helps track trends and identify seasonality in your data:  
+**[1️⃣ Change Over Time Analysis](https://github.com/amanuelgebreegziabhare-maker/SQL-Project-Advanced-Data-Analytics/blob/main/documents/change_over_time_analysis.sql):** Analyze how a measure evolves over time. Helps track trends and identify seasonality in your data:  
 #
         Σ[Measure] by [Date Dimension] 
         
